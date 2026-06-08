@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", var(--font-sans);
+
+  /* FarmFresh Direct Color Palette */
+  --color-primary: #0d631b;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #2e7d32;
+  --color-on-primary-container: #cbffc2;
+  --color-secondary: #126d27;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #9cf49c;
+  --color-on-secondary-container: #19722b;
+  --color-tertiary: #7a4b00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #9b6100;
+  --color-on-tertiary-container: #ffefe0;
+  --color-background: #f6fbf6;
+  --color-on-background: #171d1a;
+  --color-surface: #f6fbf6;
+  --color-on-surface: #171d1a;
+  --color-surface-dim: #d6dbd7;
+  --color-surface-bright: #f6fbf6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f0f5f0;
+  --color-surface-container: #eaefea;
+  --color-surface-container-high: #e4e9e5;
+  --color-surface-container-highest: #dfe4df;
+  --color-on-surface-variant: #40493d;
+  --color-outline: #707a6c;
+  --color-outline-variant: #bfcaba;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom ambient shadow style */
+.shadow-soft {
+  box-shadow: 0px 4px 20px rgba(46, 125, 50, 0.05);
+}
+
+.ambient-card {
+  box-shadow: 0px 4px 20px rgba(46, 125, 50, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ambient-card:hover {
+  box-shadow: 0px 8px 30px rgba(46, 125, 50, 0.1);
+  border-color: rgba(13, 99, 27, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Base animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-item {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide scrollbars but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+

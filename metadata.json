@@ -1,0 +1,6 @@
+{
+  "name": "FarmFresh Direct",
+  "description": "A farm-to-door online organic food marketplace and partner dashboard connecting local growers, urban consumers, and platform admins.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
